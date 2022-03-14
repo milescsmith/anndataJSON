@@ -23,7 +23,9 @@
 
 ## Features
 
-- TODO
+- Adds functions for exporting an AnnData object to JSON and importing a scRNAseq dataset into an AnnData object
+
+NOTE: At the moment, only a simple implementation of exporting works.
 
 ## Requirements
 
@@ -31,15 +33,24 @@
 
 ## Installation
 
-You can install _anndata_to_json_ via [pip] from [PyPI]:
+Currently, _anndata_to_json_ must be installed via [pip] from github:
 
 ```console
-$ pip install anndata_to_json
+$ pip install git+https://github.com/milescsmith/anndata_to_json
 ```
 
 ## Usage
 
-Please see the [Command-line Reference] for details.
+Through some decorator magic, these functions are added as methods to an AnnData
+object, so simply importing the function like
+
+```python
+from anndata_json import to_json
+
+adata.to_json("path/to/file.json")
+```
+
+is sufficient.
 
 ## Contributing
 

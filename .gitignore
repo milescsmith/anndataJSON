@@ -619,3 +619,6 @@ MigrationBackup/
 **/.ipynb_checkpoints
 
 noxfile.py
+
+*.json
+*.gz

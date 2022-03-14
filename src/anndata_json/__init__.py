@@ -1,7 +1,9 @@
 # src/anndata_to_json/__init__.py
 """anndata_to_json."""
 
-from importlib.metadata import metadata, version
+from importlib.metadata import metadata
+from importlib.metadata import version
+
 
 try:
     __author__ = metadata(__name__)["Author"]
@@ -19,4 +21,6 @@ except KeyError:  # pragma: no cover
     __version__ = "unknown"
 
 from .exporting import to_json
+
+
 __all__ = ["to_json"]
