@@ -2,7 +2,7 @@
 import pytest
 from click.testing import CliRunner
 
-from anndata_to_json import __main__
+from anndataJSON import __main__
 
 
 @pytest.fixture

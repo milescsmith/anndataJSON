@@ -1,8 +1,8 @@
 # Reference
 
-## anndata_to_json
+## anndataJSON
 
 ```{eval-rst}
-.. automodule:: anndata_to_json
+.. automodule:: anndataJSON
    :members:
 ```

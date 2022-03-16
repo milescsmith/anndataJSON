@@ -41,8 +41,8 @@ def to_json(
             f"please retry with overwrite set to True"
         )
 
-    obs = self.obs.to_dict()
-    var = self.var.to_dict()
+    obs_dict = self.obs.to_dict()
+    var_dict = self.var.to_dict()
     scale_data = self.X.T.tolist()
     counts = self.raw.X.toarray().tolist()
 
@@ -64,10 +64,6 @@ def to_json(
         for x in self.obsm
     }
 
-    # For the most part, I can't see why the information in
-    # uns would need to be saved, except for maybe the PCA variance
-    # info
-
     uns_dict = {
         i: j
         for i, j
@@ -85,8 +81,8 @@ def to_json(
 
     adata_dict = {
         "flavor": "anndata",
-        "obs": obs,
-        "var": var,
+        "obs": obs_dict,
+        "var": var_dict,
         "scale_data": scale_data,
         "counts": counts,
         "uns": uns_dict,

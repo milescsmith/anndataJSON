@@ -622,3 +622,4 @@ noxfile.py
 
 *.json
 *.gz
+tests/gse135779_dendritic_cells.h5ad

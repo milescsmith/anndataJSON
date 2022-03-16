@@ -1,5 +1,5 @@
 """Sphinx configuration."""
-project = "anndata_to_json"
+project = "anndataJSON"
 author = "Miles Smith"
 copyright = "2022, Miles Smith"
 extensions = [

@@ -1,5 +1,5 @@
-# src/anndata_to_json/__init__.py
-"""anndata_to_json."""
+# src/anndataJSON/__init__.py
+"""anndataJSON."""
 
 from importlib.metadata import metadata
 from importlib.metadata import version
