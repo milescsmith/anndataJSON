@@ -4,13 +4,12 @@
 [![Status](https://img.shields.io/pypi/status/anndataJSON.svg)][status]
 [![Python Version](https://img.shields.io/pypi/pyversions/anndataJSON)][python version]
 [![License](https://img.shields.io/pypi/l/anndataJSON)][license]
-
 [![Read the documentation at https://anndataJSON.readthedocs.io/](https://img.shields.io/readthedocs/anndataJSON/latest.svg?label=Read%20the%20Docs)][read the docs]
 [![Tests](https://github.com/milescsmith/anndataJSON/workflows/Tests/badge.svg)][tests]
 [![Codecov](https://codecov.io/gh/milescsmith/anndataJSON/branch/main/graph/badge.svg)][codecov]
-
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
+
 
 [pypi_]: https://pypi.org/project/anndataJSON/
 [status]: https://pypi.org/project/anndataJSON/
@@ -20,6 +19,7 @@
 [codecov]: https://app.codecov.io/gh/milescsmith/anndataJSON
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
+![Alt](https://repobeats.axiom.co/api/embed/f07bfa0adc4aa8fc3ece345f4b0649f117565659.svg "Repobeats analytics image")
 
 # Why?
 
