@@ -19,5 +19,5 @@ reference
 contributing
 Code of Conduct <codeofconduct>
 License <license>
-Changelog <https://github.com/milescsmith/anndata_to_json/releases>
+Changelog <https://github.com/milescsmith/anndataJSON/releases>
 ```

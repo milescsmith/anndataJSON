@@ -1,19 +1,19 @@
 [tool.poetry]
-name = "anndata_json"
+name = "anndataJSON"
 version = "0.1.0"
-description = "anndata_json"
+description = "anndataJSON"
 authors = ["Miles Smith <mileschristiansmith@gmail.com>"]
 license = "GPL-3.0"
 readme = "README.md"
-homepage = "https://github.com/milescsmith/anndata_to_json"
-repository = "https://github.com/milescsmith/anndata_to_json"
-documentation = "https://anndata_to_json.readthedocs.io"
+homepage = "https://github.com/milescsmith/anndataJSON"
+repository = "https://github.com/milescsmith/anndataJSON"
+documentation = "https://anndataJSON.readthedocs.io"
 classifiers = [
     "Development Status :: 3 - Alpha",
 ]
 
 [tool.poetry.urls]
-Changelog = "https://github.com/milescsmith/anndata_to_json/releases"
+Changelog = "https://github.com/milescsmith/anndataJSON/releases"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
@@ -58,7 +58,7 @@ tests = ["tests", "*/tests"]
 
 [tool.coverage.run]
 branch = true
-source = ["anndata_to_json", "tests"]
+source = ["anndataJSON", "tests"]
 
 [tool.coverage.report]
 show_missing = true

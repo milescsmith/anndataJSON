@@ -12,9 +12,9 @@ Here is a list of important resources for contributors:
 - [Code of Conduct]
 
 [gpl 3.0 license]: https://opensource.org/licenses/GPL-3.0
-[source code]: https://github.com/milescsmith/anndata_to_json
-[documentation]: https://anndata_to_json.readthedocs.io/
-[issue tracker]: https://github.com/milescsmith/anndata_to_json/issues
+[source code]: https://github.com/milescsmith/anndataJSON
+[documentation]: https://anndataJSON.readthedocs.io/
+[issue tracker]: https://github.com/milescsmith/anndataJSON/issues
 
 ## How to report a bug
 
@@ -54,7 +54,7 @@ or the command-line interface:
 
 ```console
 $ poetry run python
-$ poetry run anndata_to_json
+$ poetry run anndataJSON
 ```
 
 [poetry]: https://python-poetry.org/
@@ -108,7 +108,7 @@ $ nox --session=pre-commit -- install
 It is recommended to open an issue before starting work on anything.
 This will allow a chance to talk it over with the owners and validate your approach.
 
-[pull request]: https://github.com/milescsmith/anndata_to_json/pulls
+[pull request]: https://github.com/milescsmith/anndataJSON/pulls
 
 <!-- github-only -->
 

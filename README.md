@@ -1,23 +1,23 @@
-# anndata_to_json
+# anndataJSON
 
-[![PyPI](https://img.shields.io/pypi/v/anndata_to_json.svg)][pypi_]
-[![Status](https://img.shields.io/pypi/status/anndata_to_json.svg)][status]
-[![Python Version](https://img.shields.io/pypi/pyversions/anndata_to_json)][python version]
-[![License](https://img.shields.io/pypi/l/anndata_to_json)][license]
+[![PyPI](https://img.shields.io/pypi/v/anndataJSON.svg)][pypi_]
+[![Status](https://img.shields.io/pypi/status/anndataJSON.svg)][status]
+[![Python Version](https://img.shields.io/pypi/pyversions/anndataJSON)][python version]
+[![License](https://img.shields.io/pypi/l/anndataJSON)][license]
 
-[![Read the documentation at https://anndata_to_json.readthedocs.io/](https://img.shields.io/readthedocs/anndata_to_json/latest.svg?label=Read%20the%20Docs)][read the docs]
-[![Tests](https://github.com/milescsmith/anndata_to_json/workflows/Tests/badge.svg)][tests]
-[![Codecov](https://codecov.io/gh/milescsmith/anndata_to_json/branch/main/graph/badge.svg)][codecov]
+[![Read the documentation at https://anndataJSON.readthedocs.io/](https://img.shields.io/readthedocs/anndataJSON/latest.svg?label=Read%20the%20Docs)][read the docs]
+[![Tests](https://github.com/milescsmith/anndataJSON/workflows/Tests/badge.svg)][tests]
+[![Codecov](https://codecov.io/gh/milescsmith/anndataJSON/branch/main/graph/badge.svg)][codecov]
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
 
-[pypi_]: https://pypi.org/project/anndata_to_json/
-[status]: https://pypi.org/project/anndata_to_json/
-[python version]: https://pypi.org/project/anndata_to_json
-[read the docs]: https://anndata_to_json.readthedocs.io/
-[tests]: https://github.com/milescsmith/anndata_to_json/actions?workflow=Tests
-[codecov]: https://app.codecov.io/gh/milescsmith/anndata_to_json
+[pypi_]: https://pypi.org/project/anndataJSON/
+[status]: https://pypi.org/project/anndataJSON/
+[python version]: https://pypi.org/project/anndataJSON
+[read the docs]: https://anndataJSON.readthedocs.io/
+[tests]: https://github.com/milescsmith/anndataJSON/actions?workflow=Tests
+[codecov]: https://app.codecov.io/gh/milescsmith/anndataJSON
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
@@ -33,10 +33,10 @@ NOTE: At the moment, only a simple implementation of exporting works.
 
 ## Installation
 
-Currently, _anndata_to_json_ must be installed via [pip] from github:
+Currently, _anndataJSON_ must be installed via [pip] from github:
 
 ```console
-$ pip install git+https://github.com/milescsmith/anndata_to_json
+$ pip install git+https://github.com/milescsmith/anndataJSON
 ```
 
 ## Usage
@@ -45,7 +45,7 @@ Through some decorator magic, these functions are added as methods to an AnnData
 object, so simply importing the function like
 
 ```python
-from anndata_json import to_json
+from anndataJSON import to_json
 
 adata.to_json("path/to/file.json")
 ```
@@ -60,7 +60,7 @@ To learn more, see the [Contributor Guide].
 ## License
 
 Distributed under the terms of the [GPL 3.0 license][license],
-_anndata_to_json_ is free and open source software.
+_anndataJSON_ is free and open source software.
 
 ## Issues
 
@@ -74,11 +74,11 @@ This project was generated from [@cjolowicz]'s [Hypermodern Python Cookiecutter]
 [@cjolowicz]: https://github.com/cjolowicz
 [pypi]: https://pypi.org/
 [hypermodern python cookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
-[file an issue]: https://github.com/milescsmith/anndata_to_json/issues
+[file an issue]: https://github.com/milescsmith/anndataJSON/issues
 [pip]: https://pip.pypa.io/
 
 <!-- github-only -->
 
-[license]: https://github.com/milescsmith/anndata_to_json/blob/main/LICENSE
-[contributor guide]: https://github.com/milescsmith/anndata_to_json/blob/main/CONTRIBUTING.md
-[command-line reference]: https://anndata_to_json.readthedocs.io/en/latest/usage.html
+[license]: https://github.com/milescsmith/anndataJSON/blob/main/LICENSE
+[contributor guide]: https://github.com/milescsmith/anndataJSON/blob/main/CONTRIBUTING.md
+[command-line reference]: https://anndataJSON.readthedocs.io/en/latest/usage.html

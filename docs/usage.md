@@ -1,7 +1,7 @@
 # Usage
 
 ```{eval-rst}
-.. click:: anndata_to_json.__main__:main
-    :prog: anndata_to_json
+.. click:: anndataJSON.__main__:main
+    :prog: anndataJSON
     :nested: full
 ```

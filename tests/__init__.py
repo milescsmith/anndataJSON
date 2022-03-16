@@ -1,1 +1,1 @@
-"""Test suite for the anndata_to_json package."""
+"""Test suite for the anndataJSON package."""
