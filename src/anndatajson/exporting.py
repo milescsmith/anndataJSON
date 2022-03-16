@@ -1,18 +1,21 @@
 from gzip import open as gzopen
 from pathlib import Path
-from typing import Union, Optional
+from typing import Optional
+from typing import Union
 
+import anndata as ad
 import pandas as pd
-from anndata import AnnData
+from orjson import OPT_SERIALIZE_NUMPY
 from orjson import dumps
 from typeguard import typechecked
 
 from .utils import add_method
+from .utils import default
 
 
 # TODO: add gzipping on save, provided it isn't difficult to read
 # a gzipped JSON file in R
-@add_method(AnnData)
+@add_method(ad.AnnData)
 @typechecked
 def to_json(
     self,
@@ -43,16 +46,14 @@ def to_json(
 
     obs_dict = self.obs.to_dict()
     var_dict = self.var.to_dict()
-    scale_data = self.X.T.tolist()
-    counts = self.raw.X.toarray().tolist()
+    scale_data = self.X.T
+    counts = self.raw.X.T.todense()
 
     paga_dict = {
-        "connectivities": self.uns["paga"]["connectivities"].todense().tolist(),
-        "connectivities_tree": self.uns["paga"]["connectivities_tree"]
-        .todense()
-        .tolist(),
+        "connectivities": self.uns["paga"]["connectivities"].todense(),
+        "connectivities_tree": self.uns["paga"]["connectivities_tree"].todense(),
         "groups": self.uns["paga"]["groups"],
-        "pos": self.uns["paga"]["pos"].tolist(),
+        "pos": self.uns["paga"]["pos"],
     }
 
     reductions = {
@@ -64,20 +65,20 @@ def to_json(
         for x in self.obsm
     }
 
-    uns_dict = {
-        i: j
-        for i, j
-        in zip(
-            self.uns,
-            [
-                self.uns[x].tolist() if isinstance(self.uns[x], np.ndarray)
-                else dict(self.uns[x]) if isinstance(self.uns[x], ad.compat.OverloadedDict)
-                else self.uns[x]
-                for x
-                in self.uns
-            ]
-        )
-    }
+    # uns_dict = {
+    #     i: j
+    #     for i, j
+    #     in zip(
+    #         self.uns,
+    #         [
+    #             self.uns[x].tolist() if isinstance(self.uns[x], np.ndarray)
+    #             else dict(self.uns[x]) if isinstance(self.uns[x], ad.compat.OverloadedDict)
+    #             else self.uns[x]
+    #             for x
+    #             in self.uns
+    #         ]
+    #     )
+    # }
 
     adata_dict = {
         "flavor": "anndata",
@@ -85,16 +86,20 @@ def to_json(
         "var": var_dict,
         "scale_data": scale_data,
         "counts": counts,
-        "uns": uns_dict,
+        # "uns": uns_dict,
         "obsm": reductions,
         "paga": paga_dict,
-        "varm": {x: self.varm[x].tolist() for x in self.varm},
-        "obsp": {y: self.obsp[y].toarray().tolist() for y in self.obsp},
+        "varm": {x: self.varm[x] for x in self.varm},
+        "obsp": {y: self.obsp[y].toarray() for y in self.obsp},
     }
 
     if compress:
         with gzopen(outfile.with_suffix(outfile.suffix + ".gz"), "wb") as out_json:
-            out_json.write(dumps(adata_dict))
+            out_json.write(
+                dumps(adata_dict, option=OPT_SERIALIZE_NUMPY, default=default)
+            )
     else:
         with open(outfile, "wb") as out_json:
-            out_json.write(dumps(adata_dict))
+            out_json.write(
+                dumps(adata_dict, option=OPT_SERIALIZE_NUMPY, default=default)
+            )
