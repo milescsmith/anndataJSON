@@ -68,20 +68,20 @@ def to_json(
     # uns would need to be saved, except for maybe the PCA variance
     # info
 
-    # uns = {
-    #     i: j
-    #     for i, j
-    #     in zip(
-    #         self.uns,
-    #          [
-    #              self.uns[x].tolist()
-    #             if isinstance(self.uns[x], np.ndarray)
-    #             else self.uns[x]
-    #             for x
-    #             in self.uns
-    #           ]
-    #         )
-    #     }
+    uns_dict = {
+        i: j
+        for i, j
+        in zip(
+            self.uns,
+            [
+                self.uns[x].tolist() if isinstance(self.uns[x], np.ndarray)
+                else dict(self.uns[x]) if isinstance(self.uns[x], ad.compat.OverloadedDict)
+                else self.uns[x]
+                for x
+                in self.uns
+            ]
+        )
+    }
 
     adata_dict = {
         "flavor": "anndata",
@@ -89,7 +89,7 @@ def to_json(
         "var": var,
         "scale_data": scale_data,
         "counts": counts,
-        # "uns": uns_dict,
+        "uns": uns_dict,
         "obsm": reductions,
         "paga": paga_dict,
         "varm": {x: self.varm[x].tolist() for x in self.varm},

@@ -21,6 +21,15 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
+# Why?
+
+I need something that is able to convert back and forth between AnnData/Scanpy and Seurat and
+1) the other options do not work (in particular, {hdf5r} has some issues) and
+2) I don't entirely understand using the HDF5 format or know how to use Zarr, certainly not 
+enough to fix anything
+
+Yes, JSON is slow and the files are bloated, but it is easy.
+
 ## Features
 
 - Adds functions for exporting an AnnData object to JSON and importing a scRNAseq dataset into an AnnData object

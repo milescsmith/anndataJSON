@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "anndata_json"
+name = "anndataJSON"
 version = "0.1.0"
 description = "anndata_json"
 authors = ["Miles Smith <mileschristiansmith@gmail.com>"]
@@ -51,6 +51,7 @@ typeguard = ">=2.13.3"
 xdoctest = {extras = ["colors"], version = ">=0.15.10"}
 myst-parser = {version = ">=0.16.1"}
 ipython = "^8.1.1"
+ipykernel = "^6.9.2"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
